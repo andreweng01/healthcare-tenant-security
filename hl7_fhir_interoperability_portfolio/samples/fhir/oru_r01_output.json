@@ -1,0 +1,48 @@
+{
+  "messageControlId": "MSG0002",
+  "messageType": "ORU^R01",
+  "resources": [
+    {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "urn:example:hl7-patient-id",
+          "value": "P12345"
+        }
+      ],
+      "name": [
+        {
+          "family": "DOE",
+          "given": [
+            "JANE"
+          ]
+        }
+      ],
+      "birthDate": "1985-05-14",
+      "gender": "female"
+    },
+    {
+      "resourceType": "Observation",
+      "status": "final",
+      "subject": {
+        "reference": "Patient/P12345"
+      },
+      "code": {
+        "coding": [
+          {
+            "system": "urn:example:hl7-observation-code",
+            "code": "718-7"
+          }
+        ],
+        "text": "Hemoglobin [Mass/volume] in Blood"
+      },
+      "valueString": "13.8",
+      "note": [
+        {
+          "text": "Source units: g/dL"
+        }
+      ],
+      "effectiveDateTime": "2026-10-27T11:00:00"
+    }
+  ]
+}

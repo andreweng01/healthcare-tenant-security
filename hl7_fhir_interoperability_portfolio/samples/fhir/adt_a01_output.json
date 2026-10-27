@@ -1,0 +1,37 @@
+{
+  "messageControlId": "MSG0001",
+  "messageType": "ADT^A01",
+  "resources": [
+    {
+      "resourceType": "Patient",
+      "identifier": [
+        {
+          "system": "urn:example:hl7-patient-id",
+          "value": "P12345"
+        }
+      ],
+      "name": [
+        {
+          "family": "DOE",
+          "given": [
+            "JANE"
+          ]
+        }
+      ],
+      "birthDate": "1985-05-14",
+      "gender": "female"
+    },
+    {
+      "resourceType": "Encounter",
+      "status": "in-progress",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "subject": {
+        "reference": "Patient/P12345"
+      }
+    }
+  ]
+}
